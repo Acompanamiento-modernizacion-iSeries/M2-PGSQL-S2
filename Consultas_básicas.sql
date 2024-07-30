@@ -41,7 +41,7 @@ select * from sucursales where nombre like 'Central%';
 select * from transacciones where tipo_transaccion like '%Depósito%';
 
 -- LIKE (Búsqueda por fecha)
-select * from transacciones where fecha_transaccion like '2023%';
+select * from transacciones where to_char(fecha_transaccion, 'yyyy-mm-dd') like '2023%';
 
 -- LIKE (Búsqueda por descripción)
 select * from transacciones where descripcion like '%pago%';
